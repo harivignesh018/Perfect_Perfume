@@ -10,4 +10,5 @@ ENV MYSQLCLIENT_LDFLAGS="-L/usr/local/mysql/lib"
 # Set up your application
 WORKDIR /app
 COPY . /app/
-RUN python -m venv --copies /opt/venv && . /opt/venv/bin/activate && pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
